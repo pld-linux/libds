@@ -1,7 +1,8 @@
 Summary:	Shared Library for Data Structures
+Summary(pl):	Wspó³dzielone biblioteki stróktur danych
 Name:		libds
 Version:	1.3.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://yallara.cs.rmit.edu.au/%7Emalsmith/C0A00201/%{name}/%{name}-%{version}.tar.bz2
@@ -11,19 +12,38 @@ URL:		http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Shared Library for Data Structures
+Shared Library for Data Structures.
+
+%description -l pl
+Wspó³dzielone biblioteki stróktur danych.
 
 %package devel
+Summary:	Development files for %{name}
+Summary(pl):	Pliki dla programistów do biblioteki %{name}
 Group:		Development/Libraries
-Requires:	libds = %{version}
-Summary:	Support for developing libds-based applications
+Requires:	libds = %{epoch}:%{version}
 
 %description devel
-Support for developing libds-based applications
+This package contains development files for the %{name} library.
+
+%description devel -l pl
+Ten pakiet zawiera pliki dla programistów korzystaj±cych z biblioteki
+%{name}.
+
+%package static
+Summary:        Static %{name} library
+Summary(pl):    Statyczna biblioteka %{name}
+Group:		Development/Libraries
+Requires:	libds = %{epoch}:%{version}
+
+%description static
+This package contains the static %{name} library.
+ 
+%description static -l pl
+Ten pakiet zawiera statyczn± wersjê biblioteki %{name}.
 
 %prep
 %setup -q
-
 %patch -p1
 
 %build
@@ -51,6 +71,8 @@ rm -fR $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc htmldocs/*
 %attr(755,root,root) %{_bindir}/*
+%{_includedir}/*
+
+%files static
 %{_libdir}/*.a
 %{_libdir}/*.la
-%{_includedir}/*
