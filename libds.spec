@@ -27,6 +27,7 @@ Support for developing libds-based applications
 %patch -p1
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 
