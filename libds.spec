@@ -1,13 +1,13 @@
 Summary:	Shared Library for Data Structures
 Summary(pl):	Wspó³dzielona biblioteka struktur danych
 Name:		libds
-Version:	1.5.2
+Version:	1.5.3
 Release:	1
 License:	GPL
 Group:		Libraries
 #Source0Download: http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
 Source0:	http://yallara.cs.rmit.edu.au/~malsmith/C0A00201/libds/%{name}-%{version}.tar.bz2
-# Source0-md5:	d5490dafc407935fbe889b66926a2c3d
+# Source0-md5:	1f231fa20cfc9cec03b0329a6968c7f2
 Patch0:		%{name}-makefile.patch
 URL:		http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
 BuildRequires:	autoconf
