@@ -28,6 +28,7 @@ Summary:	Development files for %{name}
 Summary(pl):	Pliki dla programistów do biblioteki %{name}
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	libstdc++-devel
 
 %description devel
 This package contains development files for the %{name} library.
