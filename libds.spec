@@ -1,13 +1,13 @@
 Summary:	Shared Library for Data Structures
 Summary(pl):	Wspó³dzielona biblioteka struktur danych
 Name:		libds
-Version:	1.4.0
+Version:	1.5.2
 Release:	1
 License:	GPL
 Group:		Libraries
 #Source0Download: http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
-Source0:	http://yallara.cs.rmit.edu.au/%7Emalsmith/C0A00201/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	27dd7ef790e701adbb1666e2b5b3c8aa
+Source0:	http://yallara.cs.rmit.edu.au/~malsmith/C0A00201/libds/%{name}-%{version}.tar.bz2
+# Source0-md5:	d5490dafc407935fbe889b66926a2c3d
 Patch0:		%{name}-makefile.patch
 URL:		http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
 BuildRequires:	autoconf
@@ -25,40 +25,43 @@ libDS to wspó³dzielona biblioteka dostarczaj±ca funkcje do obs³ugi
 w±tków i struktur danych.
 
 %package devel
-Summary:	Development files for %{name}
-Summary(pl):	Pliki dla programistów do biblioteki %{name}
+Summary:	Development files for libds
+Summary(pl):	Pliki dla programistów do biblioteki libds
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
 
 %description devel
-This package contains development files for the %{name} library.
+This package contains development files for the libds library.
 
 %description devel -l pl
 Ten pakiet zawiera pliki dla programistów korzystaj±cych z biblioteki
-%{name}.
+libds.
 
 %package static
-Summary:        Static %{name} library
-Summary(pl):    Statyczna biblioteka %{name}
+Summary:	Static libds library
+Summary(pl):	Statyczna biblioteka libds
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-This package contains the static %{name} library.
+This package contains the static libds library.
  
 %description static -l pl
-Ten pakiet zawiera statyczn± wersjê biblioteki %{name}.
+Ten pakiet zawiera statyczn± wersjê biblioteki libds.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+
+# kill old AC_PROG_LIBTOOL
+head -n 42 acinclude.m4 > acinclude.m4.tmp
+mv -f acinclude.m4.tmp acinclude.m4
 
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
-
 %configure
 %{__make}
 
