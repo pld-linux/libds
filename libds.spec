@@ -4,7 +4,7 @@ Version:	1.3.1
 Release:	0.1
 License:	GPL
 Group:		Libraries
-Source0:	http://yallara.cs.rmit.edu.au/~malsmith/products/libds/%{name}-%{version}.tar.bz2
+Source0:	http://yallara.cs.rmit.edu.au/%7Emalsmith/C0A00201/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	5bec4654043863fb5b07d89b9df11f5d
 Patch0:		%{name}-makefile.patch
 URL:		http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
