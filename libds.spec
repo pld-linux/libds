@@ -5,6 +5,7 @@ Release:	0.1
 License:	GPL
 Group:		Libraries
 Source0:	http://yallara.cs.rmit.edu.au/~malsmith/products/libds/%{name}-%{version}.tar.bz2
+# Source0-md5:	5bec4654043863fb5b07d89b9df11f5d
 Patch0:		%{name}-makefile.patch
 URL:		http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
