@@ -21,7 +21,7 @@ Wspó³dzielone biblioteki stróktur danych.
 Summary:	Development files for %{name}
 Summary(pl):	Pliki dla programistów do biblioteki %{name}
 Group:		Development/Libraries
-Requires:	libds = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
 This package contains development files for the %{name} library.
@@ -34,7 +34,7 @@ Ten pakiet zawiera pliki dla programistów korzystaj±cych z biblioteki
 Summary:        Static %{name} library
 Summary(pl):    Statyczna biblioteka %{name}
 Group:		Development/Libraries
-Requires:	libds = %{epoch}:%{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 This package contains the static %{name} library.
