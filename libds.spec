@@ -5,6 +5,7 @@ Version:	1.4.0
 Release:	1
 License:	GPL
 Group:		Libraries
+#Source0Download: http://yallara.cs.rmit.edu.au/~malsmith/products/libds/
 Source0:	http://yallara.cs.rmit.edu.au/%7Emalsmith/C0A00201/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	27dd7ef790e701adbb1666e2b5b3c8aa
 Patch0:		%{name}-makefile.patch
@@ -27,7 +28,7 @@ w±tków i struktur danych.
 Summary:	Development files for %{name}
 Summary(pl):	Pliki dla programistów do biblioteki %{name}
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
 
 %description devel
@@ -41,7 +42,7 @@ Ten pakiet zawiera pliki dla programistów korzystaj±cych z biblioteki
 Summary:        Static %{name} library
 Summary(pl):    Statyczna biblioteka %{name}
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains the static %{name} library.
