@@ -1,4 +1,6 @@
+# Conditional build:
 %bcond_without	static_libs	# don't build static library
+#
 Summary:	Shared Library for Data Structures
 Summary(pl):	Wspó³dzielona biblioteka struktur danych
 Name:		libds
