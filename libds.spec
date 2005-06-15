@@ -1,3 +1,4 @@
+%bcond_without	static_libs	# don't build static library
 Summary:	Shared Library for Data Structures
 Summary(pl):	Wspó³dzielona biblioteka struktur danych
 Name:		libds
@@ -62,7 +63,8 @@ mv -f acinclude.m4.tmp acinclude.m4
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -90,6 +92,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %{_includedir}/*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
