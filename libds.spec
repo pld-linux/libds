@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Shared Library for Data Structures
-Summary(pl):	Wspó³dzielona biblioteka struktur danych
+Summary(pl.UTF-8):   WspÃ³Å‚dzielona biblioteka struktur danych
 Name:		libds
 Version:	1.5.3
 Release:	1
@@ -23,13 +23,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 libDS is a shared library to provide some threading routines and data
 structures.
 
-%description -l pl
-libDS to wspó³dzielona biblioteka dostarczaj±ca funkcje do obs³ugi
-w±tków i struktur danych.
+%description -l pl.UTF-8
+libDS to wspÃ³Å‚dzielona biblioteka dostarczajÄ…ca funkcje do obsÅ‚ugi
+wÄ…tkÃ³w i struktur danych.
 
 %package devel
 Summary:	Development files for libds
-Summary(pl):	Pliki dla programistów do biblioteki libds
+Summary(pl.UTF-8):   Pliki dla programistÃ³w do biblioteki libds
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -37,21 +37,21 @@ Requires:	libstdc++-devel
 %description devel
 This package contains development files for the libds library.
 
-%description devel -l pl
-Ten pakiet zawiera pliki dla programistów korzystaj±cych z biblioteki
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki dla programistÃ³w korzystajÄ…cych z biblioteki
 libds.
 
 %package static
 Summary:	Static libds library
-Summary(pl):	Statyczna biblioteka libds
+Summary(pl.UTF-8):   Statyczna biblioteka libds
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains the static libds library.
  
-%description static -l pl
-Ten pakiet zawiera statyczn± wersjê biblioteki libds.
+%description static -l pl.UTF-8
+Ten pakiet zawiera statycznÄ… wersjÄ™ biblioteki libds.
 
 %prep
 %setup -q
