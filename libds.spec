@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Shared Library for Data Structures
-Summary(pl.UTF-8):   Współdzielona biblioteka struktur danych
+Summary(pl.UTF-8):	Współdzielona biblioteka struktur danych
 Name:		libds
 Version:	1.5.3
 Release:	1
@@ -29,7 +29,7 @@ wątków i struktur danych.
 
 %package devel
 Summary:	Development files for libds
-Summary(pl.UTF-8):   Pliki dla programistów do biblioteki libds
+Summary(pl.UTF-8):	Pliki dla programistów do biblioteki libds
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -43,7 +43,7 @@ libds.
 
 %package static
 Summary:	Static libds library
-Summary(pl.UTF-8):   Statyczna biblioteka libds
+Summary(pl.UTF-8):	Statyczna biblioteka libds
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
