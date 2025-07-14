@@ -56,7 +56,7 @@ Ten pakiet zawiera statyczną wersję biblioteki libds.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 # kill old AC_PROG_LIBTOOL
 head -n 42 acinclude.m4 > acinclude.m4.tmp
